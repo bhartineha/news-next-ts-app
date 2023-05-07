@@ -8,9 +8,9 @@ async function Homepage() {
 
   console.log(news.data);
   return (
-    <>
+    <div>
       <NewsList news={news} />
-    </>
+    </div>
   )
 }
 

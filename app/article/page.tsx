@@ -6,16 +6,15 @@ type Props = {
 
 function ArticlePage({ searchParams }: Props) {
 
-  // if ((searchParams && Object.entries(searchParams).length === 0) || !searchParams) {
-  //   return notFound();
-  // }
+  if ((searchParams && Object.entries(searchParams).length === 0) || !searchParams) {
+    return notFound();
+  }
 
-  // const article: DataEntry = searchParams;
+  const article: DataEntry = searchParams;
 
   return (
     <article>
-      {searchParams?.category}
-      {/* <section>
+      <section>
         {article.image && (
           <img src={article.image}
             alt={article.title}
@@ -26,17 +25,15 @@ function ArticlePage({ searchParams }: Props) {
         <div className='px-10'>
           <h1 className='headerTitle'>{article.title}</h1>
 
-          <section className='mt-2'>
-            <p className='text-sm line-clamp-2'>{article.description}</p>
-          </section>
+          <div className='text-xs flex divide-x-2 space-x-4'>
+            <h2 className="font-bold">{article.author} </h2>
+            <h2 className="font-bold">{article.source} </h2>
+          </div>
 
-          <footer className='text-xs flex divide-x-2 space-x-4'>
-            <h2 className="font-bold">{article.author} - </h2>
-            <h2 className="font-bold">{article.source} - </h2>
-          </footer>
+          <p className='text-sm line-clamp-2'>{article.description}</p>
 
         </div>
-      </section> */}
+      </section>
     </article>
   )
 }

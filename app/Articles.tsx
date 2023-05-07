@@ -5,8 +5,8 @@ type Props = {
 }
 
 function Articles({ article }: Props) {
-  const d = new Date(article.published_at);
-  let hour = d.getHours();
+  // const d = new Date(article.published_at);
+  // let hour = d.getHours();
 
   return (
     <article className='bg-slate-100 dark:bg-slate-800 flex flex-col rounded-lg shadow-sm
@@ -29,10 +29,9 @@ function Articles({ article }: Props) {
           <footer className='text-xs flex text-right ml-auto space-x-1 pt-5 italic text-gray-400'>
             <p>{article.source} - </p>
             <p>{article.category} - </p>
-            <p>{hour} hours ago</p>
+            <p>{article.published_at} hours ago</p>
           </footer>
         </div>
-
       </div>
 
       <ReadMoreButton article={article} />

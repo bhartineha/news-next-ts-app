@@ -10,7 +10,6 @@ function NewsList({ news }: Props) {
       {news.data.map((article) => (
         <Articles key={article.title} article={article} />
       ))}
-
     </main>
   )
 }
