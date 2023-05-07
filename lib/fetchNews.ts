@@ -13,33 +13,35 @@ const query = gql`
   $access_key: String!
   $categories: String!
   $keywords: String
-  ){
+  )
+  {
     myQuery(
       access_key: $access_key
       categories: $categories
       countries: "gb"
       sort: "published_desc"
       keywords: $keywords
-      ){
+      )
+      {
         data {
-            author
-            category
-            country
-            description
-            image
-            language
-            published_at
-            source
-            title
-            url
+          author
+          category
+          country
+          description
+          image
+          language
+          published_at
+          source
+          title
+          url
         }
         pagination {
-            count
-            limit
-            offset
-            total
+          count
+          limit
+          offset
+          total
         }
-    }
+      }
   }
 `;
 
@@ -61,11 +63,11 @@ const res = await fetch('https://goioxim.stepzen.net/api/callous-anteater/__grap
     }
   })
 }
-)
+);
 
 console.log("LOADING NEW DATA FROM API",
-category,
-Keyword
+  category,
+  Keyword
 )
 
 // Sort function by images vs not images present 

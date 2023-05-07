@@ -1,4 +1,4 @@
-import React from 'react'
+import ReadMoreButton from './ReadMoreButton';
 
 type Props = {
   article: DataEntry
@@ -34,7 +34,9 @@ function Articles({ article }: Props) {
         </div>
 
       </div>
-      <button className='text-center w-full bg-orange-400 text-white rounded-b-lg py-2'>Read More</button>
+
+      <ReadMoreButton article={article} />
+
     </article>
   )
 }

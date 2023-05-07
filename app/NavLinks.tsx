@@ -1,7 +1,7 @@
 'use client'
 // server component won't use hooks therefore this component is client side
 
-import { categories } from '../../types/constants';
+import { categories } from '../types/constants';
 import { usePathname } from 'next/navigation';
 import NavLink from './NavLink';
 

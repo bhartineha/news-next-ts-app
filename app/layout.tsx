@@ -1,11 +1,10 @@
 import '../styles/globals.css'
-import Header from './components/Header';
-import Providers from './components/Providers';
+import Header from './Header';
+import Providers from './Providers';
 
 export default function RootLayout({ children, }: { children: React.ReactNode; }) {
   return (
     <html>
-      <head />
       <Providers>
         <body className='dark:bg-zink-900 transition-all duration-700'>
           <Header />
